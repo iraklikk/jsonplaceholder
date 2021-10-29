@@ -1,13 +1,11 @@
 <div class="container" *ngIf="user$ | async as user">
-  <!--  <button [routerLink]="['/user', user.id - 1]" *ngIf="user.id > 1">Prev</button>-->
-  <!--  <button [routerLink]="['/user', user.id + 1]" *ngIf="user.id < 10">Next</button>-->
   <div class="user-container">
     <div class="left">
       <p>Name :</p>
       <p>Username :</p>
       <p>Website :</p>
       <p>Phone Number: </p>
-      <p>Email: </p>
+      <p  class="email">Email: </p>
       <p>Posts: </p>
     </div>
     <div class="right">
@@ -18,5 +16,9 @@
       <p>{{user.email}}</p>
       <button (click)="getPosts(user.id)">Posts</button>
     </div>
+  </div>
+  <div class="nav-container">
+    <button class="prev" [routerLink]="['/user', user.id - 1]" *ngIf="user.id > 1">Previous</button>
+    <button class="next" [routerLink]="['/user', user.id + 1]" *ngIf="user.id < 10">Next</button>
   </div>
 </div>

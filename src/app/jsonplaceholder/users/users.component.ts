@@ -9,10 +9,11 @@ import {Router} from "@angular/router";
 })
 export class UsersComponent implements OnInit {
 
+  // Observable to get all user's from backend
   users$ = this.jsonService.getUsers();
 
-  constructor(private jsonService: JsonplaceholderService,
-              private router: Router) { }
+  // using jsonService to get http requests
+  constructor(private jsonService: JsonplaceholderService) { }
 
   ngOnInit(): void {
   }

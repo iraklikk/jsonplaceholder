@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Users List</h1>
+ <!-- using async pipe to subscribe to users$ Observable -->
   <div class="button-container" *ngIf="users$ | async as users">
+<!-- *ngFor to display all users available in users$ Observable -->
     <button [routerLink]="['/user', user.id]" *ngFor="let user of users">{{user.username}}</button>
   </div>
 </div>

@@ -1,3 +1,4 @@
+// interface for User
 export interface User {
   name : string;
   username :string;
@@ -5,6 +6,23 @@ export interface User {
   phone: string;
   email : string;
   id: number,
-  address : {},
-  company: {},
+  address : Address,
+  company: Company,
+}
+
+interface Address {
+  street : string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo : {
+    lat : string;
+    lng: string;
+  }
+}
+
+interface Company {
+  name: string;
+  catchPhrase: string;
+  bs: string;
 }

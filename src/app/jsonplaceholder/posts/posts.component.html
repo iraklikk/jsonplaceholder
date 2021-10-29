@@ -1,10 +1,12 @@
-
-
+<!-- using async pipe to subscribe to posts$ Observable -->
 <div class="container" *ngIf="posts$ | async as posts">
+<!-- using user$ observable to display current users name  -->
+  <h2 *ngIf="user$ | async as user">
+    {{user.username}}'s posts
+  </h2>
   <div class="post-container" *ngFor="let post of posts">
-    <p>{{post.userId}}</p>
-    <p>{{post.id}}</p>
-    <p>{{post.title}}</p>
-    <p>{{post.body}}</p>
+    <p> <span> Title : </span> {{post.title}}</p>
+    <p> <span> Body : </span> {{post.body}}</p>
   </div>
+  <button *ngIf="user$ | async as user" [routerLink]="['/user', user.id]">Back</button>
 </div>

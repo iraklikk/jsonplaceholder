@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Users List</h1>
+  <div class="button-container" *ngIf="users$ | async as users">
+    <button [routerLink]="['/user', user.id]" *ngFor="let user of users">{{user.username}}</button>
+  </div>
+</div>
+

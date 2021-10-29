@@ -1,0 +1,72 @@
+.container {
+  padding-top: 30px;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+
+    button {
+      background: #0D6EFD;
+      border: 2px solid #0D6EFD;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover  {
+        background: white;
+        color: #0D6EFD;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .container {
+    .button-container {
+      width: 90%;
+      margin: 0 auto;
+      column-gap: 8px;
+
+      button {
+        padding: 12px 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .container {
+    .button-container {
+      width: 76%;
+      gap: 10px;
+
+      button {
+        padding: 14px 18px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    .button-container {
+      width: 64%;
+      gap: 14px;
+    }
+  }
+}
+
+
